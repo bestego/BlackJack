@@ -30,7 +30,7 @@ public class Blackjack {
         /* definieer speler(s)
          * geeft ieder speler 2 kaarten
          * geef bank 1 kaart */
-        bj.maakSpelers();   //ToDo: handle 0 spelers
+        bj.maakSpelers();
         for (Speler speler : bj.spelers) {
             bj.croupier.deel(bj.dealer, 2, speler);
         }

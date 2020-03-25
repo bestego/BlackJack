@@ -46,7 +46,7 @@ public class KaartenSet {
         return totaal;
     }
 
-    public void berekenTotaal() { //ToDo: error in calc, e.g. B/H/V geeft 20 punten!
+    public void berekenTotaal() {
         int azen = 0, standaard = 0, volleAzen, resultaat;
         for (Kaart kaart : set) {
             if (kaart.waarde == 11) {
@@ -59,9 +59,6 @@ public class KaartenSet {
         if (azen == 0) {
             totaal = standaard;
         } else {
-//            resultaat = standaard + (azen - 1);
-//            rest = 21 - standaard - (azen - 1);
-//            totaal = rest > 11 ? resultaat = resultaat + 11 : resultaat + 1;
             volleAzen = (21 - standaard) / 11;
             totaal = standaard + volleAzen * 11 + (azen - volleAzen) * 1;
 
